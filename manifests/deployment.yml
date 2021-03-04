@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: fordafingazpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fordafingazpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: fordafingazpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: fordafingazpipelinesjavascriptdocker 
+          image: albroakscr.azurecr.io/fordafingazpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
